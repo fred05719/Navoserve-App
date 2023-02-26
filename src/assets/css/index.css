@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #bdbdbd;
+}
+
+.row {
+  width: 100%;
+}
+
+.card {
+  width: 500px;
+  height: auto;
+  background-color: #F5F5F5;
+  padding: 0 2rem;
+
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px;
+  }
+}
+
+.logo {
+  width: 100px;
+  margin: auto;
+  padding: 0;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px #5f5f5f,
+      0px 0px 0px 5px #ecf0f3,
+      8px 8px 15px #a7aaa7,
+      -8px -8px 15px #fff;
+}
+
+.logo-title {
+  color: #ee3c4c;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  line-height: 0.8;
+}
+
+.logo-subtitle {
+  color: #0a8b51;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.form-check-input {
+  border-color: #757575;
+}
+
+.form-check-input:hover {
+  cursor: pointer;
+}
+
+.form-check-input:focus {
+  box-shadow: none;
+}
+
+.form-check-input:checked {
+  background-color: #109A5C; /* change to the desired color */
+}
+
+.open_policy {
+  color: #109A5C;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.open_policy:hover {
+  color: #0a8b51;
+}
+
+.btn.prime {
+  background-color: #109A5C;
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 2rem;
+  color: #ffffff;
+}
+
+.btn.prime:hover {
+  color: #ffffff;
+  background-color: #0a8b51;
+}
+
+.spinner-border {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  height: 1.3rem;
+  width: 1.3rem;
+}

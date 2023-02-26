@@ -1,0 +1,53 @@
+
+.form {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.icon-label {
+  position: absolute;
+  font-size: 1.1rem;
+  top: 52%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: #757575;
+}
+
+.icon-action {
+  position: absolute;
+  font-size: 1.1rem;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: #757575;
+  cursor: pointer;
+}
+
+.text-box,
+.choice-box,
+.form-switch {
+  background-color: #e0e0e0;
+  box-shadow: none !important;
+  border: 1px solid #757575;
+  border-radius: 0.3rem;
+  position: relative;
+  padding: 0.8rem 1rem;
+  padding-left: 2.5rem;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.text-box:focus,
+.choice-box:focus {
+  border: 2px solid #109A5C;
+  background-color: #e0e0e0;
+}
+
+.text-box:focus  + .icon-label {
+  color: #109A5C;
+}
