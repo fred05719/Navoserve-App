@@ -1,0 +1,45 @@
+.jconfirm-scrollpane {
+  display: flex;
+  justify-content: center;
+  background-color: #3535357e;
+}
+
+.jc-bs3-container {
+  margin: 0;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.jconfirm-box-container {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .jconfirm-box {
+    max-width: 350px !important;
+  }
+}
+
+.jconfirm-box {
+  width: 400px !important;
+  padding: 1.2rem !important;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons {
+  padding-bottom: 0px !important;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-title-c .jconfirm-title {
+  color: #272727;
+  font-weight: 600;
+}
+
+.jconfirm-icon-c {
+  display: none !important;
+}
+
+.jconfirm-content {
+  color: #494949;
+}

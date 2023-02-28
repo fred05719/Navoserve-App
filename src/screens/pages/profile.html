@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/images/navo_logo.png">
+  <link rel="stylesheet" href="../assets/scss/main.css">
+  <link rel="stylesheet" href="../assets/css/home_page.css">
+  <link rel="stylesheet" href="../assets/css/input_form.css">
+  <link rel="stylesheet" href="../assets/css/jconfirm.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.0/jquery-confirm.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+  <title>Navoserve App | Home</title>
+</head>
+
+<body>
+  PROFILE SCREEN
+  <br>
+  <button id="logout">LOGOUT</button>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/user_state.js"></script>
+
+  <script>
+    var logout = document.getElementById('logout');
+    logout.addEventListener('click', function () {
+      firebase.auth().signOut().then(() => {
+        window.location.href = "login_screen.html";
+      });
+    });
+  </script>
+
+</body>
+
+</html>

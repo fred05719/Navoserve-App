@@ -24,10 +24,15 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    background-color: #F5F5F5;
+  }
+
   .card {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     border-radius: 0px;
+    padding: 0 1em;
   }
 }
 
@@ -51,7 +56,7 @@ body {
 .logo-title {
   color: #ee3c4c;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 2em;
   letter-spacing: 2px;
   line-height: 0.8;
 }

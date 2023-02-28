@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
+
 *,
 *::before,
 *::after {
@@ -8,88 +9,59 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #bdbdbd;
 }
 
-.head {
-  font-size: 1rem;
-  font-weight: 900;
+.action, .appbar_title, .leading {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  z-index: 99;
 }
 
-.subhead {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #575757;
+.appbar {
+  background-color: #109A5C;
+  width: 100vw;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
 }
 
-.text-box::placeholder {
-  color: #757575;
-  opacity: 1;
+.leading {
+  font-family: 'Klavika', sans-serif;
+  color: #ffffff;
+  font-size: 1.5em;
+  padding: 1rem;
+  justify-content: start;
 }
 
-.text-box::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #757575;
-  opacity: 1;
+.appbar_title {
+  justify-self: center;
+  justify-content: center;
+  font-size: 1em;
+  padding: 0;
+  color: #ffffff;
 }
 
-.choice-box {
-  -webkit-appearance: none;
-}
-
-.choice-box:hover {
+#appform_back {
   cursor: pointer;
 }
 
-select:required:invalid {
-  color: #757575;
+#appform_back:hover {
+  color: #dddddd;
 }
 
-.choice-box option[value=""][disabled] {
-  display: none;
+
+
+@media (max-width: 768px) {
+  .main-body {
+    padding-bottom: 4rem;
+  }
 }
 
-.choice-box option {
-  color: #000;
-  padding: 10px !important;
-  min-height: 2em;
-}
-
-.choice-box option[selected] {
-  color: red;
-}
-
-.choice-box option:hover {
-  color: red;
-  margin: 1rem;
-}
-
-.btn {
-  width: 100%;
-  padding: 0.6rem;
-  border-radius: 2rem;
-  color: #ffffff;
-}
-
-.btn.prime {
-  background-color: #109A5C;
-}
-
-.btn.prime:hover {
-  color: #ffffff;
-  background-color: #0a8b51;
-}
-
-.help-block {
-  color: #dc3545;
-  font-size: 12px;
-  padding: 5px 0 0 20px;
-}
-
-.invalid {
-  border-color: #dc3545;
-}
-
-.text-box.invalid:focus,
-.choice-box.invalid:focus {
-  border-color: #dc3545;
+.main-body {
+  width: 100vw;
+  height: calc(100vh - 4rem);
+  overflow-y: auto;
+  overflow-x: hidden;
 }

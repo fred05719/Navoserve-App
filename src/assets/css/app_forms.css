@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.head {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.subhead {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #575757;
+}
+
+.text-box::placeholder {
+  color: #757575;
+  opacity: 1;
+}
+
+.text-box::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #757575;
+  opacity: 1;
+}
+
+.choice-box {
+  -webkit-appearance: none;
+}
+
+.choice-box:hover {
+  cursor: pointer;
+}
+
+select:required:invalid {
+  color: #757575;
+}
+
+.choice-box option[value=""][disabled] {
+  display: none;
+}
+
+.choice-box option {
+  color: #000;
+  padding: 10px !important;
+  min-height: 2em;
+}
+
+.choice-box option[selected] {
+  color: red;
+}
+
+.choice-box option:hover {
+  color: red;
+  margin: 1rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 2rem;
+  color: #ffffff;
+}
+
+.btn.prime {
+  background-color: #109A5C;
+}
+
+.btn.prime:hover {
+  color: #ffffff;
+  background-color: #0a8b51;
+}
+
+.help-block {
+  color: #dc3545;
+  font-size: 12px;
+  padding: 5px 0 0 20px;
+}
+
+.invalid {
+  border-color: #dc3545;
+}
+
+.text-box.invalid:focus,
+.choice-box.invalid:focus {
+  border-color: #dc3545;
+}

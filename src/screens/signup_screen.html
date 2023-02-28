@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,80 +9,90 @@
   <link rel="stylesheet" href="../assets/scss/main.css">
   <link rel="stylesheet" href="../assets/css/index.css">
   <link rel="stylesheet" href="../assets/css/input_form.css">
+  <link rel="stylesheet" href="../assets/css/jconfirm.css">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.0/jquery-confirm.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+
+
   <title>Navoserve App | Create Account</title>
 </head>
+
 <body>
 
-  <div class="container-fluid text-center p-0 vw-100 d-flex align-items-center justify-content-center">
-    
-    <div class="card mt-md-5">
-      <div class="card-body d-flex align-items-center justify-content-center flex-column">
-  
-        <div class="row p-4">
-          <div class="logo">
-            <img src="../assets/images/logo.jpg" alt="NavoServe Logo">
+
+  <form id="signup_form">
+    <div class="container-fluid text-center p-0 vw-100 d-flex align-items-center justify-content-center">
+
+      <div class="card mt-md-5">
+        <div class="card-body py-5 d-flex align-items-center justify-content-center flex-column">
+
+          <div class="row p-4">
+            <div class="logo">
+              <img src="../assets/images/logo.jpg" alt="NavoServe Logo">
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-          <span class="logo-title">NavoServe</span>
-        </div>
-
-        <div class="row">
-          <span class="logo-subtitle">Social Services One-Stop Shop</span>
-        </div>
-
-        <div class="row p-4"></div>
-
-        <div class="row mb-2">
-          <div class="form">
-            <input type="text" name="fName" class="form-control text-box" placeholder="FIRST NAME" required>
-            <i class="icon-label bi bi-person-fill"></i>
+          <div class="row">
+            <span class="logo-title">NavoServe</span>
           </div>
-        </div>
 
-        <div class="row mb-2">
-          <div class="form">
-            <input type="text" name="lName" class="form-control text-box" placeholder="LAST NAME" required>
-            <i class="icon-label bi bi-person-fill"></i>
+          <div class="row">
+            <span class="logo-subtitle">Social Services One-Stop Shop</span>
           </div>
-        </div>
 
-        <div class="row mb-2">
-          <div class="form">
-            <input type="text" name="email" class="form-control text-box" placeholder="EMAIL" required>
-            <i class="icon-label bi bi-envelope-fill"></i>
+          <div class="row p-4"></div>
+
+          <div class="row mb-2">
+            <div class="form">
+              <input type="text" name="fName" class="form-control text-box" placeholder="FIRST NAME">
+              <i class="icon-label bi bi-person-fill"></i>
+            </div>
           </div>
-        </div>
 
-        <div class="row mb-2">
-          <div class="form">
-            <input type="password" name="password" class="form-control text-box" placeholder="PASSWORD" required>
-            <i class="icon-label bi bi-key-fill"></i>
-            <i class="icon-action bi bi-eye-slash-fill" id="show_password"></i>
+          <div class="row mb-2">
+            <div class="form">
+              <input type="text" name="lName" class="form-control text-box" placeholder="LAST NAME">
+              <i class="icon-label bi bi-person-fill"></i>
+            </div>
           </div>
-        </div>
 
-        <div class="row mb-4">
-          <div class="form">
-            <input type="password" name="cpassword" class="form-control text-box" placeholder="CONFIRM PASSWORD" required>
-            <i class="icon-label bi bi-key-fill"></i>
-            <i class="icon-action bi bi-eye-slash-fill" id="show_password"></i>
+          <div class="row mb-2">
+            <div class="form">
+              <input type="text" name="email" class="form-control text-box" placeholder="EMAIL">
+              <i class="icon-label bi bi-envelope-fill"></i>
+            </div>
           </div>
-        </div>
 
-        <div class="row mb-5">
-          <button type="submit" class="btn btn-primary rounded-pill text-white fw-bold p-2" id="submit-btn">CREATE ACCOUNT</button>
-        </div>
+          <div class="row mb-2">
+            <div class="form">
+              <input type="password" name="password" class="form-control text-box" placeholder="PASSWORD" id="password">
+              <i class="icon-label bi bi-key-fill"></i>
+              <i class="icon-action bi bi-eye-slash-fill" id="show_password"></i>
+            </div>
+          </div>
 
-        <div class="border w-100 border-secondary border-bottom-0 mb-3"></div>
-  
-        <div class="row">
-          <div class="col">
-            <span>Already have an account?</span>
-            <a href="login_screen.html" class="link-primary fw-bold text-decoration-none">Login</a>
+          <div class="row mb-4">
+            <div class="form">
+              <input type="password" name="cpassword" class="form-control text-box" placeholder="CONFIRM PASSWORD">
+              <i class="icon-label bi bi-key-fill"></i>
+              <i class="icon-action bi bi-eye-slash-fill" id="show_cpassword"></i>
+            </div>
+          </div>
+
+          <div class="row mb-5">
+            <button type="submit" class="btn btn-primary rounded-pill text-white fw-bold p-2" id="submit-btn">CREATE
+              ACCOUNT</button>
+          </div>
+
+          <div class="border w-100 border-secondary border-bottom-0 mb-3"></div>
+
+          <div class="row">
+            <div class="col">
+              <span>Already have an account?</span>
+              <a href="login_screen.html" class="link-primary fw-bold text-decoration-none">Login</a>
             </div>
           </div>
         </div>
@@ -89,10 +100,23 @@
       </div>
     </div>
 
-  </div>
+    </div>
+  </form>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.0/jquery-confirm.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+
   <script src="../assets/js/input_form.js"></script>
+  <script src="../assets/js/signup_auth.js"></script>
+  <script src="../assets/js/validator/signup_validator.js"></script>
+
+  <!-- firebase scripts -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="../assets/js/firebase_init.js"></script>
 
 </body>
+
 </html>

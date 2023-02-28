@@ -2,22 +2,23 @@ $(document).ready(function () {
   const db = firebase.firestore();
   const auth = firebase.auth();
 
-
   //ON AUTHSTATECHANGED
   auth.onAuthStateChanged(user => {
     if (user !== null) {
-      
+
       db.collection('customers').doc(user.uid).get().then((doc) => {
-        
-        console.log(user.emailVerified);
         if (doc.exists) {
-          (!user.emailVerified) ? window.location.href = 'email_verify' : window.location.href = "home_screen.html";
-        } 
+          (!user.emailVerified) ? window.location.href = 'email_verify.html' : window.location.href = "home_screen.html";
+        } else {
+          user.delete();
+          var message = "There is no user record corresponding to this identifier. The user may have been deleted.";
+          showAlertDialog('Login Failed', message);
+        }
+      }).catch((error) => {
+        showAlertDialog('Login Failed', error.message);
       });
     }
   });
-
-
 
 
   //ON LOGIN BUTTON CLICK
@@ -30,15 +31,28 @@ $(document).ready(function () {
 
     console.log(email)
 
-    if((email == '') || (password == '')) {
-      alert('Please fill up all fields.');
-      $('#login_btn').html('LOGIN');
+    if ((email == '') || (password == '')) {
+      showAlertDialog('Login Failed', 'Please enter your credentials');
     } else {
       auth.signInWithEmailAndPassword(email, password)
-        .then((userCredential) => {}).catch((error) => {});
+        .then((userCredential) => { }).catch((error) => {
+          showAlertDialog('Login Failed', error.message);
+          $(".text-box[name='password']").val('');
+        });
     }
 
   });
+
+  function showAlertDialog(title, message) {
+    $.alert({
+      title: title,
+      content: message,
+      backgroundDismiss: true,
+      columnClass: 'col-md-4 col-xs-2',
+      animateFromElement: true,
+    });
+    $('#login_btn').html('LOGIN');
+  }
 
 });
 

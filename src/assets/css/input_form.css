@@ -51,3 +51,24 @@
 .text-box:focus  + .icon-label {
   color: #109A5C;
 }
+
+.help-block {
+  color: #dc3545;
+  font-size: 0.7rem;
+  line-height: 1;
+  padding: 3px 0 0 10px;
+  text-align: start;
+}
+
+.invalid {
+  border-color: #dc3545;
+}
+
+.text-box.invalid:focus,
+.choice-box.invalid:focus {
+  border-color: #dc3545;
+}
+
+.text-box.invalid:focus  + .icon-label {
+  color: #dc3545;
+}
