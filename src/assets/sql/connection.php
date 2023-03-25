@@ -1,12 +1,11 @@
 <?php
-  // $host = 'sql111.epizy.com'; 
-  $host = 'localhost'; 
-  $user = 'epiz_33362837';
-  $password = 'Lalisa1997';
-  $dbname = 'epiz_33362837_db_navoserve';
+  $SQL_HOST = 'db4free.net'; 
+  $SQL_USERNAME = 'navoserve';
+  $SQL_PASSWORD = 'navoserve';
+  $DATABASE_NAME = 'db_navoserve';
 
   // Create connection
-  $conn = new mysqli($host, 'root', '', $dbname);
+  $conn = new mysqli($SQL_HOST, $SQL_USERNAME,  $SQL_PASSWORD, $DATABASE_NAME);
 
   // Check connection
   if ($conn->connect_error) {

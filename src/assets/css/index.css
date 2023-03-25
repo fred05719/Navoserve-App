@@ -43,6 +43,7 @@ body {
 }
 
 .logo img {
+  user-drag: none;
   width: 100px;
   height: 100px;
   object-fit: cover;
@@ -94,10 +95,10 @@ body {
   color: #0a8b51;
 }
 
-.btn.prime {
+/* .btn.prime {
   background-color: #109A5C;
   width: 100%;
-  padding: 0.6rem;
+  padding: 1rem;
   border-radius: 2rem;
   color: #ffffff;
 }
@@ -105,12 +106,4 @@ body {
 .btn.prime:hover {
   color: #ffffff;
   background-color: #0a8b51;
-}
-
-.spinner-border {
-  padding: 0;
-  margin: 0;
-  font-size: 0.9rem;
-  height: 1.3rem;
-  width: 1.3rem;
-}
+} */

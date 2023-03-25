@@ -6,11 +6,11 @@ $(document).ready(function () {
   auth.onAuthStateChanged(user => {
     if (user !== null) {
 
-      db.collection('customers').doc(user.uid).get().then((doc) => {
+      db.collection('applicants').doc(user.uid).get().then((doc) => {
         if (doc.exists) {
           (!user.emailVerified) ? window.location.href = 'email_verify.html' : window.location.href = "home_screen.html";
         } else {
-          user.delete();
+          // user.delete();
           var message = "There is no user record corresponding to this identifier. The user may have been deleted.";
           showAlertDialog('Login Failed', message);
         }

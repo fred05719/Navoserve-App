@@ -21,4 +21,6 @@ $(document).ready(function () {
     $input.attr('type', type);
   });
 
+  $('.logo img').attr('draggable', 'false')
+
 });

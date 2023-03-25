@@ -8,7 +8,7 @@
   <link rel="icon" href="../assets/images/navo_logo.png">
   <link rel="stylesheet" href="../assets/scss/main.css">
   <link rel="stylesheet" href="../assets/css/index.css">
-  <link rel="stylesheet" href="../assets/css/input_form.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/jconfirm.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.0/jquery-confirm.min.css">
@@ -21,7 +21,10 @@
 </head>
 
 <body>
-
+  
+  <div class="page_loading_con">
+    <div class="spinner-border text-primary big" role="status"><span class="sr-only"></span></div>
+  </div>
 
   <div class="container-fluid text-center p-0 vw-100 d-flex align-items-center justify-content-center">
 
@@ -62,7 +65,7 @@
         </div>
 
         <div class="row mb-3">
-          <button type="button" class="btn btn-primary rounded-pill text-white fw-bold p-2" id="resend-email">RESEND EMAIL</button>
+          <button type="button" class="btn btn-primary rounded-pill text-white fw-bold btn_pad" id="resend-email">RESEND EMAIL</button>
         </div>
 
         <div class="row">
@@ -79,7 +82,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.0/jquery-confirm.min.js"></script>
 
   <script src="../assets/js/input_form.js"></script>
-  <script src="../assets/js/email_verify.js"></script>
+  <script src="../assets/js/signup/email_verify.js"></script>
   <script src="../assets/js/user_state.js"></script>
 
   <!-- firebase scripts -->

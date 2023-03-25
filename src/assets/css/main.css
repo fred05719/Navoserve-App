@@ -1,0 +1,156 @@
+* {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  user-select: none; /* Standard syntax */
+}
+
+
+.form {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.icon-label {
+  position: absolute;
+  font-size: 1.1rem;
+  top: 52%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: #757575;
+}
+
+.icon-action {
+  position: absolute;
+  font-size: 1.1rem;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: #757575;
+  cursor: pointer;
+}
+
+.text-box,
+.choice-box,
+.form-switch {
+  background-color: #e0e0e0;
+  box-shadow: none !important;
+  border: 1px solid #757575;
+  border-radius: 0.3rem;
+  position: relative;
+  padding: 1rem;
+  padding-left: 2.5rem;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.text-box:focus,
+.choice-box:focus {
+  border: 2px solid #109A5C;
+  background-color: #e0e0e0;
+}
+
+.text-box:focus  + .icon-label {
+  color: #109A5C;
+}
+
+.help-block {
+  color: #dc3545;
+  font-size: 0.7rem;
+  line-height: 1;
+  padding: 3px 0 0 10px;
+  text-align: start;
+}
+
+.invalid {
+  border-color: #dc3545;
+}
+
+.text-box.invalid:focus,
+.choice-box.invalid:focus {
+  border-color: #dc3545;
+}
+
+.text-box.invalid:focus  + .icon-label {
+  color: #dc3545;
+}
+
+.btn_pad {
+  padding: 1rem 0;
+}
+
+.btn_pad:has(.spinner-border) {
+  padding: 0;
+  height: 58px;
+}
+
+.choice-box {
+  -webkit-appearance: none;
+}
+
+.choice-box:hover {
+  cursor: pointer;
+}
+
+select:required:invalid {
+  color: #757575;
+}
+
+.choice-box option[value=""][disabled] {
+  display: none;
+}
+
+.choice-box option {
+  color: #000;
+  padding: 10px !important;
+  min-height: 2em;
+}
+
+
+/* Style the scrollbar */
+.main-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #e0e0e0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #949494;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a5a5a5;
+}
+
+.spinner-border {
+  width: 2rem;
+  height: 2rem;
+  border-width: 4px;
+  padding: 0 !important;
+}
+
+.page_loading_con {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #00000069;
+  z-index: 99;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.page_loading_con .spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 5px;
+  z-index: 100;
+}

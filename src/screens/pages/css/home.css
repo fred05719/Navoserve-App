@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.heading_page {
+  color: #141414;
+  font-weight: 600;
+  text-align: start;
+  margin: 1em 0.2em;
+  font-size: 1.3em;
+}
+
+.socser_card {
+  background-color: #ffffff;
+  border-radius: 0.2rem;
+  margin: 0.2em 0.2em;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #c9c9c9;
+  cursor: pointer;
+}
+
+.socser_card:hover {
+  background-color: #f0f0f0;
+}
+
+ul {
+  list-style: none !important;
+}
+
+.loading_card {
+  background-color: #c9c9c9;
+  border-radius: 0.2rem;
+  margin: 0.2em 0.2em;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #c9c9c9;
+  cursor: pointer;
+  height: 56px;
+}
+
+
+.socser_color {
+  width: 1em;
+  height: 100%;
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+  background-color: aqua;
+}
+
+.socser_content {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.socser_title {
+  font-weight: 600;
+}
+
+.socser_sub {
+  font-weight: normal;
+  font-size: 0.8rem;
+  color: #646464;
+}
+
+.arrow_con {
+  padding: 1rem;
+}
+
+.arrow_con i {
+  -webkit-text-stroke: 1px;
+}

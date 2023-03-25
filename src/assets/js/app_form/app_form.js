@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+  const urlParams = new URLSearchParams(window.location.search);
+  const pageName = urlParams.get("page");
+
   $('#appform_back').click(function (e) {
     e.preventDefault();
 
@@ -9,12 +12,15 @@ $(document).ready(function () {
       columnClass: 'col-md-4 col-xs-2',
       animateFromElement: true,
       buttons: {
+        No: function () {},
         Yes: function () {
           window.location.href='home_screen.html'
         },
-        No: function () {},
       }
     });
   });
+
+  var pageURL = 'pages/'+pageName+'-form.html';
+  $('.main-body').load(pageURL);
 
 });

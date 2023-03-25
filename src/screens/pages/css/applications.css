@@ -8,7 +8,15 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #e0e0e0;
+  background-color: #f0f0f0;
+}
+
+.heading_page {
+  color: #141414;
+  font-weight: 600;
+  text-align: start;
+  margin: 1em 0.2em;
+  font-size: 1.3em;
 }
 
 .socser_card {
@@ -26,6 +34,10 @@ body {
   background-color: #f0f0f0;
 }
 
+ul {
+  list-style: none !important;
+}
+
 .loading_card {
   background-color: #c9c9c9;
   border-radius: 0.2rem;
@@ -38,30 +50,37 @@ body {
   height: 56px;
 }
 
-.heading_page {
-  color: #141414;
-  font-weight: 600;
-  text-align: start;
-  margin: 1em 0.2em;
-  font-size: 1.3em;
-
-}
 
 .socser_color {
   width: 1em;
   height: 100%;
   border-top-left-radius: 0.2rem;
   border-bottom-left-radius: 0.2rem;
+  background-color: aqua;
+}
+
+.socser_content {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
 }
 
 .socser_title {
-  text-align: start;
-  padding: 1rem;
   font-weight: 600;
+}
+
+.socser_sub {
+  font-weight: normal;
+  font-size: 0.8rem;
+  color: #646464;
+  margin-left: 0.3rem;
 }
 
 .arrow_con {
   padding: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .arrow_con i {

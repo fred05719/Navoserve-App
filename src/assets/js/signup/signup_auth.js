@@ -3,7 +3,7 @@ $(document).ready(function () {
   const db = firebase.firestore();
   const auth = firebase.auth();
 
-  const tbl_customer = db.collection("customers");
+  const tbl_applicant = db.collection("applicants");
 
   $('#signup_form').submit(function (e) {
     e.preventDefault();
@@ -18,6 +18,7 @@ $(document).ready(function () {
       $(signupDataArray).each(function (index, obj) {
         signupDataObject[obj.name] = obj.value;
       });
+      signupDataObject.date_created = new Date().getTime();
       //CONVERT FORM OBJECT TO FORMDATA
       const signupFormData = new FormData();
       for (const key in signupDataObject) {
@@ -37,14 +38,18 @@ $(document).ready(function () {
           success: function (data) {
             if(data.status == 'SUCCESS') {
               const newFormObject = {};
-              newFormObject.customer_id = data.id;
+              newFormObject.applicant_id = data.id;
               newFormObject.email = cred.user.email;
-              newFormObject.name = signupDataObject['lName'] +', '+ signupDataObject['fName'];
+              newFormObject.firstname = signupDataObject['fName']
+              newFormObject.lastname = signupDataObject['lName'];
               newFormObject.email_verified = false;
-              newFormObject.user_type = 'CUSTOMER';
+              newFormObject.user_type = 'APPLICANT';
+              newFormObject.date_created = signupDataObject.date_created;
 
-              tbl_customer.doc(cred.user.uid).set(newFormObject).then(() => {
+              tbl_applicant.doc(cred.user.uid).set(newFormObject).then(() => {
                 window.location.href="email_verify.html";
+              }).catch((error) => {
+                showAlertDialog('Signup Failed', error.message);
               });
               console.log(newFormObject);
               console.log(data.index);

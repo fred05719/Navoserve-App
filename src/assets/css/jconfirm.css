@@ -11,6 +11,10 @@
   justify-content: center;
 }
 
+.jc-bs3-row {
+  width: 100vw;
+}
+
 .jconfirm-box-container {
   padding: 0;
   margin: 0;
@@ -24,7 +28,7 @@
 
 .jconfirm-box {
   width: 400px !important;
-  padding: 1.2rem !important;
+  padding: 1rem !important;
 }
 
 .jconfirm .jconfirm-box .jconfirm-buttons {

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+@font-face {
+  font-family: 'Klavika';
+  src: url('../fonts/klavika-medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kontora';
+  src: url('../fonts/kontora-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: rgb(2, 0, 36);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-image: linear-gradient(125deg,
+      #087c48 0%,
+      hsl(151deg 68% 35%) 12%,
+      #2ba168 26%,
+      hsl(151deg 52% 44%) 40%,
+      hsl(151deg 48% 49%) 53%,
+      hsl(151deg 50% 53%) 66%,
+      rgb(89, 207, 150) 76%,
+      hsl(152deg 62% 62%) 86%,
+      hsl(152deg 71% 66%) 94%,
+      hsl(153deg 83% 71%) 100%);
+}
+
+.navbar {
+  background-color: #0000001c;
+}
+
+#sidebar .sidebar-header .logo {
+  width: 40px;
+  height: 40px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px #5f5f5f,
+    0px 0px 0px 5px #ecf0f3,
+    8px 8px 15px #a7aaa7,
+    -8px -8px 15px #fff;
+}
+
+.logo_text {
+  font-family: 'Klavika', sans-serif;
+  color: #ffffff;
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  justify-content: start;
+  text-shadow: 2px 2px #3f3f3f3a;
+  font-weight: 600;
+}
+
+a.nav-link {
+  color: #f0f0f0 !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+a.nav-link:hover {
+  color: #d4d4d4 !important;
+
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Kontora', sans-serif;
+  color: #ffffff;
+  min-height: calc(100vh - 98px);
+}
+
+.text_top {
+  font-size: 2.5rem;
+  color: #e0dfdf;
+}
+
+.text_bot {
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+#dl_link {
+  display: none;
+}
+
+#dl_link_nav {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo_text {
+    font-size: 1.5rem;
+  }
+
+  #dl_link_nav {
+    display: none;
+  }
+
+  .text_top {
+    font-size: 1rem;
+    color: #e0dfdf;
+  }
+  
+  .text_bot {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  #dl_link {
+    display: block;
+  }
+
+  a.nav-link {
+    color: #f0f0f0 !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 2rem;
+  }
+}
+
+.my_btn {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ee3c4c;
+  color: #FFFFFF;
+  border: none;
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 15rem;
+  margin: auto;
+}
+
+.my_btn:hover {
+  color: #ffffff;
+  background-color: #f35260;
+}

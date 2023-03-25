@@ -2,11 +2,10 @@
 
 @include 'connection.php';
 
-$socser_id = $_POST['socser_id'];
-$customer_id = $_POST['customer_id'];
-$queue_num = $_POST['queue_num'];
-$schedule = $_POST['schedule'];
+$socser_index = $_POST['socser_index'];
+$applicant_index = $_POST['applicant_index'];
 $app_status = $_POST['app_status'];
+$date_created = $_POST['date_created'];
 
 $lname = $_POST['last_name'];
 $fname = $_POST['first_name'];
@@ -19,7 +18,7 @@ $age = $_POST['age'];
 $civil_status = $_POST['civil_status'];
 
 
-$sql = "INSERT INTO applications (socser_index, customer_index, app_status) VALUES ($socser_id, $customer_id, '$app_status')";
+$sql = "INSERT INTO applications (applicant_index, socser_index, app_status, date_created) VALUES ($applicant_index, $socser_index, '$app_status', $date_created)";
 
 $send_status = '';
 $send_index = '';
@@ -33,7 +32,7 @@ if ($conn->query($sql) === TRUE) {
   $set_code = " UPDATE applications SET app_id = '$app_id', details_index = $index WHERE app_index = $index ";
   if ($conn->query($set_code) === TRUE) {
 
-    $set_details = "INSERT INTO details (details_index, last_name, first_name, middle_name, extension_name, gender, address, bday, age, civil_status) VALUES ($index, '$lname', '$fname', '$mname', '$xname', '$gender', '$address', '$bday', '$age', '$civil_status')";
+    $set_details = "INSERT INTO app_details (details_index, last_name, first_name, middle_name, extension_name, gender, home_address, bday, age, civil_status) VALUES ($index, '$lname', '$fname', '$mname', '$xname', '$gender', '$address', $bday, '$age', '$civil_status')";
 
     if ($conn->query($set_details) === TRUE) {
       $send_index = $index;

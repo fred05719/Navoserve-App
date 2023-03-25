@@ -12,11 +12,11 @@ $(document).ready(function () {
         var timeleft = 61;
         var downloadTimer = setInterval(function () {
           timeleft--;
-          $('#resend-email').text('Resend verification (' + timeleft + ')');
+          $('#resend-email').text('RESEND VERIFICATION (' + timeleft + ')');
           if (timeleft <= 0) {
             clearInterval(downloadTimer);
             $('#resend-email').prop('disabled', false);
-            $('#resend-email').text('Resend verification');
+            $('#resend-email').text('RESEND VERIFICATION');
           }
         }, 1000);
 
@@ -28,24 +28,26 @@ $(document).ready(function () {
   }
   sendEmailVerification();
 
-
+  
   var emailInterval = setInterval(() => {
     auth.currentUser.reload().then(function () {
       var user = auth.currentUser;
       if (user !== null) {
         console.log(user.uid);
         if (user.emailVerified) {
-          db.collection('customers').doc(user.uid).get().then(function (doc) {
+          $('.page_loading_con').css('display', 'flex');
+          db.collection('applicants').doc(user.uid).get().then(function (doc) {
             $.ajax({
               type: 'post',
-              url: '../assets/sql/alter_customer.php',
+              url: '../assets/sql/alter_applicants.php',
               data: {
-                'customer_id': doc.data().customer_id,
+                'applicant_id': doc.data().applicant_id,
               },
               success: function (data) {
                 console.log(data);
-                db.collection('customers').doc(user.uid).update({ verified: true })
-                  .then(() => {
+                db.collection('applicants').doc(user.uid).update({ email_verified: true })
+                .then(() => {
+                    $('.page_loading_con').css('display', 'none');
                     window.location.href = 'home_screen.html';
                   });
               }
@@ -56,6 +58,8 @@ $(document).ready(function () {
       }
     });
   }, 1000);
+
+  $('#resend-email').click(sendEmailVerification);
 
   $('#logout').click(function (e) {
     e.preventDefault();

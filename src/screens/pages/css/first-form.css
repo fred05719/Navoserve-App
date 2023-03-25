@@ -8,6 +8,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
 }
 
 .logo {
@@ -55,8 +56,7 @@ body {
 
 .btn.prime {
   background-color: #109A5C;
-  width: 100%;
-  padding: 0.6rem;
+  padding: 1rem 0;
   border-radius: 2rem;
   color: #ffffff;
 }
@@ -64,4 +64,8 @@ body {
 .btn.prime:hover {
   color: #ffffff;
   background-color: #0a8b51;
+}
+
+#labelForPolicy {
+  cursor: pointer;
 }

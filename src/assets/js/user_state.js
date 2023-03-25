@@ -6,7 +6,7 @@ $(document).ready(function () {
    //ON AUTHSTATECHANGED
    auth.onAuthStateChanged(user => {
     if (user == null) {
-      window.location.href="../index.html";
+      window.location.href="../../index.html";
     }
   });
 
